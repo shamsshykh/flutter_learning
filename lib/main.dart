@@ -2,7 +2,37 @@ import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter/widgets.dart';
 
-void main() => runApp(MyNewApp());
+void main() => runApp(MyStatefullApp());
+
+class MyStatefullApp extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return new MaterialApp(
+      home: new _MyAppState(),
+    );
+  }
+}
+
+class _MyAppState extends StatefulWidget {
+  @override
+  __MyAppStateState createState() => __MyAppStateState();
+}
+
+class __MyAppStateState extends State<_MyAppState> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: new AppBar(
+        title: new Text("Wellcome Flutter"),
+      ),
+      body: new Center(
+        child: new Text("Hellow World StateFullWidget"),
+      ),
+    );
+  }
+}
+
 
 class MyNewApp  extends StatelessWidget{
   @override
