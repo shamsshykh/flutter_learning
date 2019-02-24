@@ -20,18 +20,37 @@ class _MyAppState extends StatefulWidget {
 }
 
 class __MyAppStateState extends State<_MyAppState> {
+  int incremenent=0;
+  Widget _bodyWidget() {
+   return  new Container(
+      child:  new Center(
+          child: new Column(
+            children: <Widget>[
+              new Text("Hellow World $incremenent"),
+              new RaisedButton(onPressed: _onClick,child: new Text("Click me")  ),
+            ],
+          )
+      ),
+    );
+  }
+  void _onClick(){
+    setState(() {
+      incremenent++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        title: new Text("Wellcome Flutter"),
+        title: new Text("Welcome Flutter",textAlign: TextAlign.center,),
       ),
-      body: new Center(
-        child: new Text("Hellow World StateFullWidget"),
-      ),
+      body: _bodyWidget(),
     );
   }
+
 }
+
 
 
 class MyNewApp  extends StatelessWidget{
