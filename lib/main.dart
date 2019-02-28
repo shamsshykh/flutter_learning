@@ -51,6 +51,7 @@ class __MyAppStateState extends State<_MyAppState> {
         children: <Widget>[
           new Text("Hellow World $incremenent"),
           new Text("This is ${Util.mode} Mode"),
+          new FloatingActionButton(onPressed: _onClick,child: Icon(Icons.ac_unit),),
           new Text("${Util.url}"),
           new RaisedButton(onPressed: _onClick, child: new Text("Click me")),
         ],
